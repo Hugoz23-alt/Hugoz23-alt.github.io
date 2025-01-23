@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Mensaje.css">
+    <title>Feliz Cumpleaños Abigail</title>
+</head>
+<body>
+    <div class="resolucion">
+        <div class="desktop">
+            <div class="content">
+                <h1>¡Feliz Cumpleaños Abigail!</h1>
+                <div class="message-box">
+                    Hola Abigail, ¡Feliz cumpleaños! Perdón por no poder estar allí para celebrar tu cumpleaños, pero te envío un fuerte abrazo y besos. Espero que hayas podido divertirte en este día especial. Con amor, tu tío. P.D.: Que cada día seas más grande como tu mamá.
+                </div>
+                <div class="cat">
+                    <img src="fotos/el-gato-bailando-gif-en-usagif.gif" alt="Cat dancing">
+                </div>
+            </div>
+        
+            <script>
+                function createConfetti() {
+                    const body = document.querySelector('body');
+                    for (let i = 0; i < 20; i++) {
+                        const confetti = document.createElement('div');
+                        confetti.className = 'confetti';
+                        confetti.style.left = Math.random() * 100 + 'vw';
+                        confetti.style.animationDelay = Math.random() * 3 + 's';
+                        body.appendChild(confetti);
+        
+                        setTimeout(() => {
+                            confetti.remove();
+                        }, 3000);
+                    }
+                }
+        
+                setInterval(createConfetti, 500);
+            </script>
+        </div>
+
+
+        <div class="movil">
+            <div class="content">
+        <h1>¡Feliz Cumpleaños Abigail!</h1>
+        <div class="message-box">
+            Hola Abigail, ¡Feliz cumpleaños! Perdón por no poder estar allí, pero te envío un fuerte abrazo y besos. Espero que te hayas divertido.
+        </div>
+        <div class="cat">
+            <img src="fotos/el-gato-bailando-gif-en-usagif.gif" alt="Cat dancing">
+        </div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const body = document.querySelector('body');
+            for (let i = 0; i < 10; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                body.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+        }
+
+        setInterval(createConfetti, 800);
+    </script>
+        </div>
+    </div>
+    
+</body>
+</html>
