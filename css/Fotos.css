@@ -29,13 +29,22 @@
         color: #333;
     }
 
-    .header h1 {
-        font-size: clamp(1.8rem, 6vw, 2.5rem);
-        background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6c5ce7, #a8e6cf);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        padding: 0.5rem;
+    h1 {
+        color: #FF1493;
+        font-size: clamp(2em, 8vw, 3.5em);
+        margin: 15px 0;
+        animation: shake 0.5s ease-in-out infinite;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 10px;
+        border-radius: 15px;
+        word-wrap: break-word;
+    }
+
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-3px); }
+        75% { transform: translateX(3px); }
     }
 
     .collage-container {
