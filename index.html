@@ -1,32 +1,254 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Cumple.css">
-    <title>Feliz Cumpleaños Abigail</title>
+    <title>Cliente Links Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .dashboard {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .dashboard-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dashboard-header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .search-container {
+            position: relative;
+            margin: 20px;
+        }
+        #linkSearch {
+            width: 100%;
+            padding: 12px 50px 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        #linkSearch:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 10px rgba(52,152,219,0.2);
+        }
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+        .links-list {
+            list-style-type: none;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        .link-item:hover {
+            background-color: #f9f9f9;
+        }
+        .link-icon {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+        .link-details {
+            flex-grow: 1;
+        }
+        .link-title {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .link-url {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .add-link-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .add-link-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .dashboard {
+                margin: 0;
+                border-radius: 0;
+                height: 100vh;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="resolucion">
-        <div class="desktop">
-            <div class="content">
-                <h1>Feliz Cumpleaños Abigail!</h1>
-                <div class="photo-circle">
-                    <img src="fotos/Captura.PNG" alt="Imagen de cumplea�os">
-                </div>
-                <a href="Fotos.html" class="link"><button class="next-button">Siguiente</button></a>
-            </div>
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <h1>Links de Clientes</h1>
         </div>
-        <div class="movil">
-            <div class="content">
-                <h1>Feliz Cumpleaños Abigail!</h1>
-                <div class="photo-circle">
-                    <img src="fotos/Captura.PNG" alt="Imagen de cumplea�os">
-                </div>
-                <a href="Fotos.html" class="link"><button class="next-button">Siguiente</button></a>
-            </div>
+        
+        <div class="search-container">
+            <input type="text" id="linkSearch" placeholder="Buscar links...">
+            <i class="fas fa-search search-icon"></i>
         </div>
+        
+        <ul id="linksList" class="links-list">
+            <li class="link-item">
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title">Proyecto Abigail</div>
+                    <div class="link-url">Cumpleaños Abigail/Cumple.html</div>
+                </div>
+                <a href="Cumpleaños Abigail/Cumple.html" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            </li>
+            <li class="link-item">
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title"></div>
+                    <div class="link-url"></div>
+                </div>
+                <a href="Cumpleaños Abigail/Cumple.html" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            </li>
+            <li class="link-item">
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title"></div>
+                    <div class="link-url"></div>
+                </div>
+                <a href="Cumpleaños Abigail/Cumple.html" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            </li>
+            <li class="link-item">
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title"></div>
+                    <div class="link-url"></div>
+                </div>
+                <a href="Cumpleaños Abigail/Cumple.html" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            </li>
+            <li class="link-item">
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title"></div>
+                    <div class="link-url"></div>
+                </div>
+                <a href="Cumpleaños Abigail/Cumple.html" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            </li>
+            <li class="link-item">
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title"></div>
+                    <div class="link-url"></div>
+                </div>
+                <a href="Cumpleaños Abigail/Cumple.html" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            </li>
+            <!-- More links can be added here -->
+        </ul>
+        
     </div>
-    
+
+    <button class="add-link-btn" onclick="showAddLinkModal()">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <script>
+        function showAddLinkModal() {
+            const url = prompt('Ingresa la URL del link:');
+            const title = prompt('Ingresa el título del link:');
+            if (url && title) {
+                addLink(url, title);
+            }
+        }
+
+        function addLink(href, text) {
+            const ul = document.getElementById('linksList');
+            const li = document.createElement('li');
+            li.className = 'link-item';
+            
+            li.innerHTML = `
+                <i class="fas fa-link link-icon"></i>
+                <div class="link-details">
+                    <div class="link-title">${text}</div>
+                    <div class="link-url">${href}</div>
+                </div>
+                <a href="${href}" class="fas fa-external-link-alt" style="color:#666; margin-left:10px;"></a>
+            `;
+            
+            ul.appendChild(li);
+            saveLinks();
+        }
+
+        function saveLinks() {
+            const links = Array.from(document.querySelectorAll('#linksList .link-item'))
+                .map(item => ({
+                    title: item.querySelector('.link-title').textContent,
+                    href: item.querySelector('a:last-child').getAttribute('href')
+                }));
+            localStorage.setItem('clientLinks', JSON.stringify(links));
+        }
+
+        function loadLinks() {
+            const savedLinks = JSON.parse(localStorage.getItem('clientLinks') || '[]');
+            savedLinks.forEach(link => addLink(link.href, link.title));
+        }
+
+        document.getElementById('linkSearch').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const links = document.querySelectorAll('.link-item');
+            
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+            });
+        });
+
+        // Load saved links on page load
+        loadLinks();
+    </script>
 </body>
 </html>
